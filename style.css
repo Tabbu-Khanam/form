@@ -52,7 +52,9 @@ select {
     width: 100%;
     height: auto;
     padding: 15px;
-    background-color:  rgba(209, 72, 72, 0.7);
+    background-color:  rgba(209, 72, 72, 0.2);
+    -webkit-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
     border: none;
     outline: 0; 
     color: white;
@@ -93,14 +95,9 @@ button {
 button:hover {
     background-color: rgba(37, 68, 206, 1);
 }
-input[type="text"],
-select,
-textarea {
-    background-color:  rgba(209, 72, 72, 0.2);
-    -webkit-transition: background-color 2s ease-out;
-    transition: background-color 2s ease-out;
-}
 input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
 select:focus,
 textarea:focus {
   background-color: rgba(209, 72, 72, 1);
