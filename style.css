@@ -63,7 +63,7 @@ select {
     resize: vertical;
 }
 input[id="zcode"] {
-  max-width: 150px;
+ width: 50%;
 }
 #topics {
     color: black;
@@ -97,12 +97,14 @@ input[type="text"],
 select,
 textarea {
     background-color:  rgba(209, 72, 72, 0.2);
-    transition: color 2s;
+    -webkit-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
 }
 input[type="text"]:focus,
 select:focus,
 textarea:focus {
   background-color: rgba(209, 72, 72, 1);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -115,20 +117,21 @@ textarea:focus {
         padding: 12px 12px 12px 0;
         display: inline-block;
       }
- .col-25 {
-     float: left;
-     width: 25%;
-     margin-top: 6px;
+ 
+ .row {
+    display: flex;
  }
- .col-75 {
-     float: right;
-     width: 75%;
+ .right {
+    flex: 70%;
+    margin-bottom: -20px;
  }
- .row:after {
-     display: table;
-     content: "";
-     clear: both;
+ .left {
+     align-self: center;
+     flex: 30%;
  }
+ input[id="zcode"] {
+    width: 25%;
+   }
  hr {
      width: 640px;
  }
